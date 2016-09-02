@@ -7,9 +7,9 @@ public class MainTeste {
 		leitura.lerParametros();
 
 		Calculo c = new Calculo();
-		System.out.println(c);
 		c.calcular(leitura.getLarguraChapa(),
 				leitura.getLarguraDesejada());
+		System.out.println(c);
 
 		Impressao impressao = new Impressao();
 		impressao.imprimir(leitura, c);

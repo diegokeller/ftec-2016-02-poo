@@ -26,4 +26,10 @@ public class Calculo {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Calculo [quantidadeCortes=" + quantidadeCortes
+				+ ", sobra=" + sobra + "]";
+	}
+
 }

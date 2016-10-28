@@ -1,10 +1,10 @@
 package colecoes_comparacao;
 
-public class Pessoa extends Object {
+public class Pessoa implements Comparable<Pessoa> {
 
 	private String nome;
 	private String cpf;
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -56,6 +56,13 @@ public class Pessoa extends Object {
 	@Override
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", cpf=" + cpf + "]";
+	}
+
+	@Override
+	public int compareTo(Pessoa o) {
+		System.out.println(
+				"Comparando " + this.nome + " com " + o.nome);
+		return this.getNome().compareTo(o.getNome());
 	}
 
 }

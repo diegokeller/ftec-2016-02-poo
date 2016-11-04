@@ -12,6 +12,7 @@ public class MainExemploJava8 {
 		List<String> cidades = new LinkedList<String>();
 		cidades.add("Caxias do Sul");
 		cidades.add("Farroupilha");
+		cidades.add("Brailiaiaia");
 		cidades.add("Bento Gonçalves");
 		cidades.add("São Bento do Sul");
 		cidades.add("São Francisco de Paula");
@@ -36,8 +37,8 @@ public class MainExemploJava8 {
 		cidades.stream().filter(cidade -> {
 			return cidade.contains("a");
 		})
-		.limit(3)
 		.sorted()
+		.limit(3)
 		.forEach(System.out::println);
 		
 		Map<Integer, List<String>> coleta = cidades

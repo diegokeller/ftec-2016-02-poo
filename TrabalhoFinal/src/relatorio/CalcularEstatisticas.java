@@ -29,11 +29,23 @@ public class CalcularEstatisticas {
 				}
 			}
 			if (perguntaDoRelatorio == null) {
-				System.out.println("Não achou a pergunta, vai criar.");
+				System.out
+						.println("Não achou a pergunta, vai criar.");
 				perguntaDoRelatorio = new RelatorioDTO(
 						pergunta.getPergunta(), new HashMap<>());
 				dadosRelatorio.add(perguntaDoRelatorio);
 			}
+
+			// Agora que tenho a pergunta
+			// vamos encontrar a opção de resposta no mapa
+			Double contador = perguntaDoRelatorio.getRespostas()
+					.get(pergunta.getResposta());
+			if (contador == null) {
+				contador = 0d;
+			}
+			contador++;
+			perguntaDoRelatorio.getRespostas()
+					.put(pergunta.getResposta(), contador);
 
 		}
 
